@@ -1,0 +1,22 @@
+checkpoint-0: 0.2886
+checkpoint-500: 0.2886
+checkpoint-1000: 0.2881
+checkpoint-1500: 0.2887
+checkpoint-2000: 0.2872
+checkpoint-2500: 0.2845
+checkpoint-3000: 0.2884
+checkpoint-3500: 0.2838
+checkpoint-4000: 0.2779
+checkpoint-4500: 0.2824
+checkpoint-5000: 0.2838
+checkpoint-5500: 0.2840
+checkpoint-6000: 0.2837
+checkpoint-6500: 0.2851
+checkpoint-7000: 0.2832
+checkpoint-7500: 0.2855
+checkpoint-8000: 0.2850
+checkpoint-8500: 0.2836
+checkpoint-9000: 0.2849
+checkpoint-9500: 0.2848
+checkpoint-10000: 0.2849
+
