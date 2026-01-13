@@ -36,7 +36,7 @@ def main(args):
         text = prompts[start:end]
         images = []
         for j in range(start, end):
-            image = Image.open(os.path.join(args.images, f"test_{j}.png"))
+            image = Image.open(os.path.join(args.images, f"test_{j:03d}.png"))
             image = image.resize((224, 224), Image.Resampling.BILINEAR)
             image = np.array(image).astype(np.uint8)
             image = torch.from_numpy(image).permute(2, 0, 1)

@@ -13,26 +13,6 @@ def hash_prompt(secret):
     return hash_output
 
 
-def add_direction_perturb(base_embed: torch.Tensor,
-                          strength: float = 0.12,
-                          seed: int = 42):
-    """
-    给文本嵌入加一个与自身正交的微小扰动 δ。
-    base_embed: [77, 768]  (token 序列嵌入)
-    """
-    torch.manual_seed(seed)
-    # 计算整体方向向量 (CLS token / mean)
-    v = base_embed.mean(dim=0, keepdim=True)        # [1, 768]
-
-    # 生成随机向量并做正交化
-    delta = torch.randn_like(v)
-    delta = delta - (delta @ v.T) * v / v.norm()**2 # 去掉与 v 平行分量
-    delta = delta / delta.norm()                   # 单位化
-    delta = delta * strength                       # 控制幅度 α
-
-    # 把 δ 加到每个 token，保持相对方向一致
-    perturbed = base_embed + delta
-    return perturbed
 
 def edit_model(ldm_stable, old_texts, new_texts, lamb=0.1):
     ### collect all the cross attns modules
