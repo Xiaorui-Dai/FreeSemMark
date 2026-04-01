@@ -15,7 +15,7 @@ cd FreeSemMark
 Step 2: Create a Conda environment and install PyTorch.
 ```bash
 conda create -n FreeSemMark python=3.10
-conda activate eviledit
+conda activate FreeSemMark
 pip3 install torch torchvision
 ```
 
